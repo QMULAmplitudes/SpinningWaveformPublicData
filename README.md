@@ -32,6 +32,20 @@ integralAll2 = -I (integralq1Seriesa4 + integralq2Seriesa4) /. t -> 1 /. e[1] ->
 ```
 
 ## waveform integrand after rescaling
+The file for waveform integrand with exact result is in "rescaledAmpSaS0q1.txt" and "rescaledAmpSaS0q2Simple.txt". If you want to perform the integrand in other integration method, you can use the two code. 
+
+"rescaledAmpSaS0q1.txt" is for the $q_1^2$ channel.
+"rescaledAmpSaS0q2Simple.txt" is for the $q_2^2$ channel. 
+
+To used the code, you need some subprogramms to evaluate the entire functions. The minimal subgrogrammes are included in "TestforUse.nb".
+
+
+## Five point classical spin gravity amplitude
+The five point classical spin amplitude is in "intMAllSimple.txt". 
+
+## Four point classical spin gravity amplitude 
+The five point classical spin amplitude is in "amp4ClassForUse.txt".  If you want to use the four point Compton amplitude in other gravitational progress, you need to load this file. 
+
 
 
 
