@@ -9,7 +9,7 @@ The file for waveform data with exact result is in "resAllFinalq1New.txt" and "r
 To get the full waveform contribution, you need to add them together.
 
 
-## Waveform data with Taylor expansion on the spin parameter $a$
+## Waveform data with Taylor expansion on the spin parameter "a"
 The file for waveform data with exact result is in "resAllFinalq2NewSeries.txt" and "resAllFinalq2NewSeries.txt". Here we only put out the expanded result upto $a^4$ order. If you need the result for higher spin orders, please contact the authors. 
 
 "resAllFinalq1NewSeries.txt" is for the $q_1^2$ channel.
