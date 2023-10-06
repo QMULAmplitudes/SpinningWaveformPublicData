@@ -21,4 +21,25 @@ The file for waveform data with exact result is in "resAllFinalq2NewSeries.txt" 
 
 "resAllFinalq1NewSeries.txt" is for the $q_1^2$ channel.
 "resAllFinalq2NewSeries.txt" is for the $q_2^2$ channel. 
-Similarly, to get the full waveform contribution, you need to add them together.
+Similarly, to get the full waveform contribution, you need to add them together and with some simple replacement as following mathematica code
+
+```
+integralq1Series = Import["resAllFinalq1NewSeries.txt"] // ToExpression;;
+integralq2Series = Import["resAllFinalq2NewSeries.txt"] // ToExpression;
+integralq1Seriesa4 =  Sum[Series[ integralq1Series[[ii]] /. {a[1] -> t a[1], S[1] -> t S[1]}, {t,  0, 4}] // Normal, {ii, Length@integralq1Series}];
+integralq2Seriesa4 = Sum[Series[integralq2Series[[ii]] /. {a[1] -> t a[1], S[1] -> t S[1]}, {t, 0, 4}] // Normal, {ii, Length@integralq2Series}];
+integralAll2 = -I (integralq1Seriesa4 + integralq2Seriesa4) /. t -> 1 /. e[1] -> - (3/4);
+```
+
+## waveform integrand after rescaling
+
+
+
+
+
+
+
+
+
+
+
