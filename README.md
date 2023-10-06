@@ -8,6 +8,13 @@ The file for waveform data with exact result is in "resAllFinalq1New.txt" and "r
 "resAllFinalq2New.txt" is for the $q_2^2$ channel. 
 To get the full waveform contribution, you need to add them together.
 
+```
+integralq1 = Import["resAllFinalq1New.txt"] // ToExpression;
+integralq2 = Import["resAllFinalq2New.txt"] // ToExpression;
+integralAll = -I (integralq1 + integralq2) /. {a[1] -> -I at[1], S[1] -> -I St[1]} /. e[1] -> - (3/4) /. dot[at[1], v[2]] -> 0;
+```
+at[1] in the code donotes the $a_1$ in the paper.  St[1] in the code donotes the $i S_1$ in the paper. 
+
 
 ## Waveform data with Taylor expansion on the spin parameter "a"
 The file for waveform data with exact result is in "resAllFinalq2NewSeries.txt" and "resAllFinalq2NewSeries.txt". Here we only put out the expanded result upto $a^4$ order. If you need the result for higher spin orders, please contact the authors. 
