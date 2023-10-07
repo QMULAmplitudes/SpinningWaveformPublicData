@@ -18,7 +18,7 @@ at[1] in the code donotes the $a_1$ in the paper.  St[1] in the code donotes the
 The output terms contains a variable $\omega$ for the frequency. Before substitude the numerical value of retarded time $u$, you need replace $\omega$ to $i\partial_u$ and acting on that term. The Mathematica code for this is 
 
 ```
-integralNum=integralAll/.{SomeNumericalReplacementExcept_u}
+integralNum=integralAll/.{SomeNumericalReplacementExcept_u};
 resAllw2 = Coefficient[integralNum, \[Omega]^2];
 resAllw1 = Coefficient[integralNum, \[Omega]] /. \[Omega] -> 0;
 resAllw0 = integralNum /. \[Omega] -> 0;
@@ -43,6 +43,16 @@ integralq1Seriesa4 =  Sum[Series[ integralq1Series[[ii]] /. {a[1] -> t a[1], S[1
 integralq2Seriesa4 = Sum[Series[integralq2Series[[ii]] /. {a[1] -> t a[1], S[1] -> t S[1]}, {t, 0, 4}] // Normal, {ii, Length@integralq2Series}];
 integralAll2 = -I (integralq1Seriesa4 + integralq2Seriesa4) /. t -> 1 /. e[1] -> - (3/4);
 ```
+Similarly, you need replace the frequency to derivertive of retarded time properly 
+```
+integralNum=integralAll/.{SomeNumericalReplacementExcept_u};
+integralNum = 
+  CoefficientRules[integralNum, \[Omega]] /. 
+    Rule[f1_, f2_] :> (I)^f1[[1]] D[f2, {u, f1[[1]]}] // Total;
+```
+The above code is a naive example, in practice you need more efficient code instead.
+
+
 
 ## waveform integrand after rescaling
 The file for waveform integrand with exact result is in "rescaledAmpSaS0q1.txt" and "rescaledAmpSaS0q2Simple.txt". If you want to perform the integrand in other integration method, you can use the two code. 
