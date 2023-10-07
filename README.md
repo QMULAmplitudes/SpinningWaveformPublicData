@@ -29,7 +29,7 @@ integralNum = resnum0 + resnum1 + resnum2;
 ```
 Then you can generate the numerical data for use. Enjoy!
 
-## Waveform data with Taylor expansion on the spin parameter "a"
+## Waveform data for small spin in Taylor expansion
 The file for waveform data with exact result is in "resAllFinalq2NewSeries.txt" and "resAllFinalq2NewSeries.txt". Here we only put out the expanded result upto $a^4$ order. If you need the result for higher spin orders, please contact the authors. 
 
 "resAllFinalq1NewSeries.txt" is for the $q_1^2$ channel.
