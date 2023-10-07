@@ -58,7 +58,7 @@ The five point classical spin amplitude is in "intMAllSimple.txt".
 
 ## Four point classical spin gravity amplitude 
 The five point classical spin amplitude is in "amp4ClassForUse.txt".  If you want to use the four point Compton amplitude in other gravitational progress, you need to load this file. All the entire function is expanded to $\sinh$ and $\cosh$ function. If you are interested in the form with original entire g-function. Please contact the authors. 
-The notation for external kinematic data is shown in [arxiv:2111.15649](https://arxiv.org/abs/2111.15649),  [arxiv:2302.00498](https://arxiv.org/abs/2302.00498).
+The notation for external kinematic data is shown in [arxiv:2309.11249](https://arxiv.org/abs/2309.11249),  [arxiv:2302.00498](https://arxiv.org/abs/2302.00498).
 
 
 
