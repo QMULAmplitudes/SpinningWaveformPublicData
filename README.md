@@ -15,6 +15,8 @@ integralAll = -I (integralq1 + integralq2) /. {a[1] -> -I at[1], S[1] -> -I St[1
 ```
 at[1] in the code donotes the $a_1$ in the paper.  St[1] in the code donotes the $i S_1$ in the paper. 
 
+In practice, one need add a prefactor like ${\kappa^4 m_1 m_2 \over 8\pi$
+
 The output terms contains a variable $\omega$ for the frequency. Before substitude the numerical value of retarded time $u$, you need replace $\omega$ to $i\partial_u$ and acting on that term. The Mathematica code for this is 
 
 ```
