@@ -1,7 +1,7 @@
-# SpinningWaveformPublicData
+# SpinningWaveformPublicData (Mathematica Version)
 This repository present the gravitational waveform data at tree level for arbitrary spin without expansion the spin parameter.
 
-## Waveform data with non-perturbative spin
+## Waveform data for finite spin
 The file for waveform data with exact result is in "resAllFinalq1New.txt" and "resAllFinalq2New.txt". 
 
 "resAllFinalq1New.txt" is for the $q_1^2$ channel.
@@ -15,6 +15,19 @@ integralAll = -I (integralq1 + integralq2) /. {a[1] -> -I at[1], S[1] -> -I St[1
 ```
 at[1] in the code donotes the $a_1$ in the paper.  St[1] in the code donotes the $i S_1$ in the paper. 
 
+The output terms contains a variable $\omega$ for the frequency. Before substitude the numerical value of retarded time $u$, you need replace $\omega$ to $i\partial_u$ and acting on that term. The Mathematica code for this is 
+
+```
+integralNum=integralAll/.{SomeNumericalReplacementExcept_u}
+resAllw2 = Coefficient[integralNum, \[Omega]^2];
+resAllw1 = Coefficient[integralNum, \[Omega]] /. \[Omega] -> 0;
+resAllw0 = integralNum /. \[Omega] -> 0;
+resnum0 = resAllw0;
+resnum1 = I D[resAllw1, u];
+resnum2 = -D[D[resAllw2, u], u];
+integralNum = resnum0 + resnum1 + resnum2;
+```
+Then you can generate the numerical data for use. Enjoy!
 
 ## Waveform data with Taylor expansion on the spin parameter "a"
 The file for waveform data with exact result is in "resAllFinalq2NewSeries.txt" and "resAllFinalq2NewSeries.txt". Here we only put out the expanded result upto $a^4$ order. If you need the result for higher spin orders, please contact the authors. 
