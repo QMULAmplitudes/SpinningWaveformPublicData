@@ -14,7 +14,7 @@ integralq1 = Import["resAllFinalq1New.txt"] // ToExpression;
 integralq2 = Import["resAllFinalq2New.txt"] // ToExpression;
 integralAll = I (integralq1 + integralq2) /. {a[1] -> -I at[1], S[1] -> -I St[1]} /. e[1] -> - (3/4) /. dot[at[1], v[2]] -> 0;
 ```
-at[1] in the code donotes the $\tilde{a}_1$ in the paper.  St[1] in the code donotes the $i S_1$ in the paper. 
+at[1] in the code donotes the $\tilde{a}_1$ in the paper.  St[1] in the code donotes the $i S_1$ in the paper. The factor e[1] is a numerical coefficient the last contact term in equation (3.9) of the paper, which contributes at order $a^5$ and above. It can be fixed to -(3/4) using spin-shift symmetry, or can be changed if one wanted to relax this symmetry.
 
 In practice, one needs to add a prefactor of ${\kappa^4 m_1 m_2 \over 8\pi}$ to match with eq(5.33), for example.
 The output terms contain a variable $\omega$ for the frequency. Before substiting the numerical value of retarded time $u$, you need replace $\omega$ with $i\partial_u$ and acting on that term. The Mathematica code for this is 
