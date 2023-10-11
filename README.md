@@ -78,7 +78,7 @@ fivePointAmplitude =
 ```
 
 ## Four-point Compton classical spin gravity amplitude 
-The four-point classical spin amplitude is in "amp4ClassForUse.txt".  If you want to use the four-point Compton amplitude in other gravitational processes, you need to load this file. All the entire functions are expanded to $\sinh$ and $\cosh$ functions. The factors e[1], e[2], e[3] are numerical coefficients of the contact terms appearing in equation (3.9) and (3.11) of the paper. To enforce spin shift symmetry you can set $e[1]=-3/4,e[2]=0,e[3]=0$. If you are interested in the form with original entire G-functions, please contact the authors. 
+The four-point classical spin amplitude is in "amp4ClassForUse.txt".  If you want to use the four-point Compton amplitude in other gravitational processes, you need to load this file. All the entire functions are expanded to $\sinh$ and $\cosh$ functions. The factors $e[1], e[2], e[3]$ are numerical coefficients of the contact terms appearing in equation (3.9) and (3.11) of the paper. To enforce spin shift symmetry you can set $e[1]=-3/4,e[2]=0,e[3]=0$. If you are interested in the form with original entire G-functions, please contact the authors. 
 The notation for external kinematic data is shown in [arxiv:2309.11249](https://arxiv.org/abs/2309.11249),  [arxiv:2302.00498](https://arxiv.org/abs/2302.00498).
 
 
